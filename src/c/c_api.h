@@ -15,18 +15,18 @@ extern "C"
 
     typedef struct Matrix Matrix;
 
-    Matrix* math_createMatrix(int rows, int cols);
-    void  math_delMatrix(Matrix* m);
+    Matrix* MATRIXLIB_EXPORT math_createMatrix(int rows, int cols);
+    void MATRIXLIB_EXPORT math_delMatrix(Matrix* m);
 
-    real  math_get(const Matrix* m, int row, int col);
-    void  math_set(Matrix* m, int row, int col, real val);
+    real MATRIXLIB_EXPORT math_get(const Matrix* m, int row, int col);
+    void MATRIXLIB_EXPORT math_set(Matrix* m, int row, int col, real val);
 
-    Matrix*  math_add(const Matrix* a, const Matrix* b);
-    Matrix*  math_sub(const Matrix* a, const Matrix* b);
-    Matrix*  math_multiply(const Matrix* a, const Matrix* b);
+    Matrix* MATRIXLIB_EXPORT math_add(const Matrix* a, const Matrix* b);
+    Matrix* MATRIXLIB_EXPORT math_sub(const Matrix* a, const Matrix* b);
+    Matrix* MATRIXLIB_EXPORT math_multiply(const Matrix* a, const Matrix* b);
 
-    void  math_print(const Matrix* m);
-    void  math_matrix_input(Matrix* m);
+    void MATRIXLIB_EXPORT math_print(const Matrix* m);
+    void MATRIXLIB_EXPORT math_matrix_input(Matrix* m);
 
 #ifdef __cplusplus
 }

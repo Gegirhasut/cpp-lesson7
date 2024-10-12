@@ -1,5 +1,6 @@
 #include "matrix.h"
 #include <iostream>
+#include <cmath>
 
 using namespace math;
 

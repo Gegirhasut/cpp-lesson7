@@ -11,12 +11,14 @@ extern "C"
 {
 #endif
     typedef double real;
-    extern Matrix* math_createMatrix(int , int );
-    extern void  math_delMatrix(Matrix* );
+    extern Matrix* math_createMatrix(int, int);
+    extern void math_delMatrix(Matrix* );
 
-    extern void  math_set(Matrix* , int , int , real val);
+    extern void math_set(Matrix*, int, int, real);
 
-    extern void  math_print(const Matrix* m);
+    extern void math_print(const Matrix*);
+
+    extern void math_matrix_input(Matrix*);
 
 #ifdef __cplusplus
 }
@@ -27,6 +29,10 @@ int main () {
 
     math_set(m, 0, 0, 1);
     math_set(m, 1, 1, 1);
+
+    math_print(m);
+
+    math_matrix_input(m);
 
     math_print(m);
 
